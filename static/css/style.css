@@ -1,0 +1,234 @@
+/* Sales Forecasting Tool Styles */
+
+/* Color Palette */
+:root {
+    --primary-color: #E63946;      /* Bright Red */
+    --secondary-color: #2A9D8F;    /* Teal */
+    --accent-color: #E76F51;       /* Terracotta */
+    --background-color: #F1FAEE;   /* Off White */
+    --dark-color: #1D3557;         /* Dark Blue */
+    --light-grey: #f4f4f4;
+    --medium-grey: #ddd;
+    --success-color: #4CAF50;
+    --error-color: #f44336;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--medium-grey);
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--medium-grey);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="range"] {
+    width: 90%;
+    margin-right: 10px;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-color);
+}
+
+.btn-secondary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: var(--dark-color);
+}
+
+button:disabled {
+    background-color: var(--medium-grey);
+    cursor: not-allowed;
+}
+
+/* Status Messages */
+.status-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.working {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.success {
+    background-color: #d4edda;
+    color: var(--success-color);
+}
+
+.error {
+    background-color: #f8d7da;
+    color: var(--error-color);
+}
+
+/* Preview & Results */
+.preview-container,
+.results-container {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--medium-grey);
+}
+
+.chart-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.chart-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--medium-grey);
+    border-radius: 4px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Metrics */
+.metrics-container {
+    margin-top: 20px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.metric-box {
+    background-color: var(--light-grey);
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.metric-box h5 {
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.metric-box p {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: var(--dark-color);
+    background-color: var(--medium-grey);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+}
